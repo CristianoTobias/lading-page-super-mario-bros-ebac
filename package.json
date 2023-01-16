@@ -1,0 +1,26 @@
+{
+  "name": "lading-page-super-mario-bros",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristianoTobias/lading-page-tropa-elite-ebac.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CristianoTobias/lading-page-tropa-elite-ebac/issues"
+  },
+  "homepage": "https://github.com/CristianoTobias/lading-page-tropa-elite-ebac#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.57.1"
+  }
+}
