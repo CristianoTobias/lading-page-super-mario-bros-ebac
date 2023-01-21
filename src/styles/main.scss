@@ -1,5 +1,144 @@
-$bgcolor: rgb(41, 42, 112);
+@use 'variaveis';
+@use 'header';
+@use "hero";
+@use 'trailer-synopisis';
+@use 'characters';
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
 
 body {
-    background-color: $bgcolor;
+  background-color: variaveis.$corFundo;
+  overflow: hidden;
+
+  @media (max-width: 1023px){
+    overflow: scroll;
+  }
+  
 }
+
+
+
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width:1023px){
+    max-width: 100%;
+    
+  }
+
+  
+}
+
+.secao {
+  position: relative;
+
+  
+}
+
+.icone-scroll {
+  position: absolute;
+  bottom: 3em;
+  width: 50px;
+  height: 50px;
+ 
+  border-radius: 50%;
+  left: 5%;
+  margin-left: -15px;
+  cursor: pointer;
+  @media (max-width: 1023px){
+    display: none;
+  }
+}
+.scroll {
+  width: 30px;
+  height: 30px;
+  border-right: 5px solid #fff;
+  border-bottom:5px solid #fff;
+  display: inline-block;
+  position: relative;
+}
+.scroll-next {
+  transform: rotate(45deg);
+  margin: 14px 0 0 16.5px;
+}
+.scroll-top {
+  transform: rotate(225deg);
+  margin: 19px 0 0 17px;
+}
+.scroll-top + .scroll-top {
+  top: -15px;
+  margin-top: 0;
+}
+
+.footer {
+  &__container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__logo {
+    width: 50px;
+  }
+}
+
+@mixin text($fontSize: 16px) {
+  font-size: $fontSize;
+  line-height: $fontSize + 10px;
+  color: variaveis.$corTextoPrincipal;
+}
+
+@mixin title($fontSize: 40px) {
+  @include text($fontSize);
+  color: variaveis.$corTextoSecundario;
+}
+
+.text--big {
+  @include text(18px);
+  @media (max-width:768px){
+    @include text(14px);
+  }
+
+}
+
+.text {
+  @include text;
+}
+
+.text--small {
+  @include text(12px);
+}
+
+.title--big {
+  @include title(60px);
+  @media (max-width:768px){
+    @include title(30px);
+  }
+}
+
+.title {
+  @include title;
+}
+
+.title--small {
+  @include title(28px);
+}
+
+.link-text {
+  @include text(18px);
+  color: variaveis.$corTextoSecundario;
+  text-decoration: underline;
+}
+

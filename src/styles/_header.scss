@@ -1,0 +1,109 @@
+@use 'variaveis';
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: transparent;
+    @media (max-width: 768px) {
+        padding: 0 12px 0 20px;
+        max-width: 100%;
+        
+        background-color: variaveis.$corFundo;
+        
+       
+        
+      }
+      @media (max-width: 1023px) {
+        padding: 0 12px 0 20px;
+        max-width: 100%;
+        
+        background-color: variaveis.$corFundo;
+        
+       
+        
+      }
+   
+    
+    &__container {
+      padding: 8px 36px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  
+      @media (max-width: 768px) {
+        padding: 0 12px 0 20px;
+        max-width: 100%;
+       
+        
+      }
+      @media (max-width: 1023px) {
+        padding: 0 12px 0 20px;
+        max-width: 100%;
+       
+        
+      }
+    }
+  
+    &__links {
+      display: flex;
+      align-items: center;
+  
+      &__item {
+        margin: 5px;
+        list-style: none;
+      }
+    }
+  
+    .button {
+      height: 50px;
+      
+  
+      @media (max-width: 768px) {
+        font-size: 13px;
+        padding: 8px 11px;
+        height: 40px;
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    font-size: 14px;
+    font-weight: bold;
+    color: variaveis.$corTextoSecundario;
+    background-color: variaveis.$corFundoBotaoPrimario;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 1px solid variaveis.$corFundoBotaoPrimario;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    &:hover {
+      background-color: lighten(variaveis.$corFundoBotaoPrimario, 3%);
+    }
+  
+    &--secondary {
+      background-color: variaveis.$corFundoBotaoSecundario;
+      border: 1px solid variaveis.$corFundoBotaoSecundario;
+      &:hover {
+        background-color: lighten(variaveis.$corFundoBotaoSecundario, 3%);
+      }
+    }
+  
+    &--dark {
+      background-color: variaveis.$corFundoBotaoDark;
+      border: 1px solid variaveis.$corTextoSecundario;
+      &:hover {
+        background-color: variaveis.$corTextoSecundario;
+        color: variaveis.$corFundo;
+      }
+    }
+  }
